@@ -1,104 +1,47 @@
-USE [master]
+USE [_LeaveRequest]
 GO
-
-/****** Object:  Database [_LeaveRequest]    Script Date: 12/26/2014 8:06:13 PM ******/
-CREATE DATABASE [_LeaveRequest] ON  PRIMARY 
-( NAME = N'_LeaveRequest', FILENAME = N'J:\SERVER_DATA1\_LeaveRequest.mdf' , SIZE = 2304KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
- LOG ON 
-( NAME = N'_LeaveRequest_log', FILENAME = N'K:\SERVER_LOG1\_LeaveRequest_log.LDF' , SIZE = 576KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+/****** Object:  Table [dbo].[Histories]    Script Date: 12/28/2014 8:24:11 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [_LeaveRequest] SET COMPATIBILITY_LEVEL = 100
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[Histories](
+	[HistoryID] [int] IDENTITY(1,1) NOT NULL,
+	[changing_username] [nvarchar](max) NULL,
+	[change_event] [int] NOT NULL,
+	[change_time] [datetime] NOT NULL,
+	[edits] [nvarchar](max) NULL,
+	[Request_RequestID] [int] NULL,
+ CONSTRAINT [PK_dbo.Histories] PRIMARY KEY CLUSTERED 
+(
+	[HistoryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
-begin
-EXEC [_LeaveRequest].[dbo].[sp_fulltext_database] @action = 'enable'
-end
 GO
-
-ALTER DATABASE [_LeaveRequest] SET ANSI_NULL_DEFAULT OFF 
+/****** Object:  Table [dbo].[Requests]    Script Date: 12/28/2014 8:24:11 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [_LeaveRequest] SET ANSI_NULLS OFF 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[Requests](
+	[RequestID] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](max) NULL,
+	[start_date] [datetime] NOT NULL,
+	[end_date] [datetime] NOT NULL,
+	[notes] [nvarchar](140) NULL,
+	[LeaveType] [int] NOT NULL,
+	[Status] [int] NOT NULL,
+	[TeamLead] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Requests] PRIMARY KEY CLUSTERED 
+(
+	[RequestID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [_LeaveRequest] SET ANSI_PADDING OFF 
 GO
-
-ALTER DATABASE [_LeaveRequest] SET ANSI_WARNINGS OFF 
+ALTER TABLE [dbo].[Histories]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Histories_dbo.Requests_Request_RequestID] FOREIGN KEY([Request_RequestID])
+REFERENCES [dbo].[Requests] ([RequestID])
 GO
-
-ALTER DATABASE [_LeaveRequest] SET ARITHABORT OFF 
+ALTER TABLE [dbo].[Histories] CHECK CONSTRAINT [FK_dbo.Histories_dbo.Requests_Request_RequestID]
 GO
-
-ALTER DATABASE [_LeaveRequest] SET AUTO_CLOSE OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET AUTO_CREATE_STATISTICS ON 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET AUTO_SHRINK OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET AUTO_UPDATE_STATISTICS ON 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET CURSOR_CLOSE_ON_COMMIT OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET CURSOR_DEFAULT  GLOBAL 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET CONCAT_NULL_YIELDS_NULL OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET NUMERIC_ROUNDABORT OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET QUOTED_IDENTIFIER OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET RECURSIVE_TRIGGERS OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET  ENABLE_BROKER 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET DATE_CORRELATION_OPTIMIZATION OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET TRUSTWORTHY OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET ALLOW_SNAPSHOT_ISOLATION OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET PARAMETERIZATION SIMPLE 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET READ_COMMITTED_SNAPSHOT OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET HONOR_BROKER_PRIORITY OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET RECOVERY SIMPLE 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET  MULTI_USER 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET PAGE_VERIFY CHECKSUM  
-GO
-
-ALTER DATABASE [_LeaveRequest] SET DB_CHAINING OFF 
-GO
-
-ALTER DATABASE [_LeaveRequest] SET  READ_WRITE 
-GO
-
-
