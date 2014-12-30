@@ -1,104 +1,147 @@
-USE [master]
+USE [Schedule]
 GO
-
-/****** Object:  Database [Schedule]    Script Date: 12/26/2014 8:06:49 PM ******/
-CREATE DATABASE [Schedule] ON  PRIMARY 
-( NAME = N'Schedule', FILENAME = N'J:\SERVER_DATA1\Schedule.mdf' , SIZE = 2304KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
- LOG ON 
-( NAME = N'Schedule_log', FILENAME = N'K:\SERVER_LOG1\Schedule_log.LDF' , SIZE = 832KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+/****** Object:  Table [dbo].[days]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET COMPATIBILITY_LEVEL = 100
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[days](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[dayOfWeek] [nvarchar](max) NULL,
+	[Employee_ID] [int] NULL,
+	[WatchShift_ID] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
-begin
-EXEC [Schedule].[dbo].[sp_fulltext_database] @action = 'enable'
-end
 GO
-
-ALTER DATABASE [Schedule] SET ANSI_NULL_DEFAULT OFF 
+/****** Object:  Table [dbo].[EdmMetadata]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET ANSI_NULLS OFF 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[EdmMetadata](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ModelHash] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [Schedule] SET ANSI_PADDING OFF 
 GO
-
-ALTER DATABASE [Schedule] SET ANSI_WARNINGS OFF 
+/****** Object:  Table [dbo].[Employees]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET ARITHABORT OFF 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[Employees](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[title] [nvarchar](max) NULL,
+	[name] [nvarchar](max) NULL,
+	[samaccount] [nvarchar](max) NULL,
+	[shift_start] [int] NOT NULL,
+	[shift_finish] [int] NOT NULL,
+	[watchPosition] [int] NOT NULL,
+	[team_ID] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [Schedule] SET AUTO_CLOSE OFF 
 GO
-
-ALTER DATABASE [Schedule] SET AUTO_CREATE_STATISTICS ON 
+/****** Object:  Table [dbo].[Meetings]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET AUTO_SHRINK OFF 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[Meetings](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[employee] [nvarchar](max) NULL,
+	[subject] [nvarchar](max) NULL,
+	[location] [nvarchar](max) NULL,
+	[start] [datetime] NOT NULL,
+	[finish] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [Schedule] SET AUTO_UPDATE_STATISTICS ON 
 GO
-
-ALTER DATABASE [Schedule] SET CURSOR_CLOSE_ON_COMMIT OFF 
+/****** Object:  Table [dbo].[Teams]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET CURSOR_DEFAULT  GLOBAL 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[Teams](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [Schedule] SET CONCAT_NULL_YIELDS_NULL OFF 
 GO
-
-ALTER DATABASE [Schedule] SET NUMERIC_ROUNDABORT OFF 
+/****** Object:  Table [dbo].[WatchPositions]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET QUOTED_IDENTIFIER OFF 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[WatchPositions](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[watch_name] [nvarchar](max) NULL,
+	[employee_ID] [int] NULL,
+	[WatchShift_ID] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [Schedule] SET RECURSIVE_TRIGGERS OFF 
 GO
-
-ALTER DATABASE [Schedule] SET  ENABLE_BROKER 
+/****** Object:  Table [dbo].[WatchShifts]    Script Date: 12/28/2014 8:23:34 PM ******/
+SET ANSI_NULLS ON
 GO
-
-ALTER DATABASE [Schedule] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[WatchShifts](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[shift_name] [nvarchar](max) NULL,
+	[shift_type] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER DATABASE [Schedule] SET DATE_CORRELATION_OPTIMIZATION OFF 
 GO
-
-ALTER DATABASE [Schedule] SET TRUSTWORTHY OFF 
+ALTER TABLE [dbo].[days]  WITH CHECK ADD  CONSTRAINT [Employee_days] FOREIGN KEY([Employee_ID])
+REFERENCES [dbo].[Employees] ([ID])
 GO
-
-ALTER DATABASE [Schedule] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+ALTER TABLE [dbo].[days] CHECK CONSTRAINT [Employee_days]
 GO
-
-ALTER DATABASE [Schedule] SET PARAMETERIZATION SIMPLE 
+ALTER TABLE [dbo].[days]  WITH CHECK ADD  CONSTRAINT [WatchShift_days] FOREIGN KEY([WatchShift_ID])
+REFERENCES [dbo].[WatchShifts] ([ID])
 GO
-
-ALTER DATABASE [Schedule] SET READ_COMMITTED_SNAPSHOT OFF 
+ALTER TABLE [dbo].[days] CHECK CONSTRAINT [WatchShift_days]
 GO
-
-ALTER DATABASE [Schedule] SET HONOR_BROKER_PRIORITY OFF 
+ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [Employee_team] FOREIGN KEY([team_ID])
+REFERENCES [dbo].[Teams] ([ID])
 GO
-
-ALTER DATABASE [Schedule] SET RECOVERY SIMPLE 
+ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [Employee_team]
 GO
-
-ALTER DATABASE [Schedule] SET  MULTI_USER 
+ALTER TABLE [dbo].[WatchPositions]  WITH CHECK ADD  CONSTRAINT [WatchPosition_employee] FOREIGN KEY([employee_ID])
+REFERENCES [dbo].[Employees] ([ID])
 GO
-
-ALTER DATABASE [Schedule] SET PAGE_VERIFY CHECKSUM  
+ALTER TABLE [dbo].[WatchPositions] CHECK CONSTRAINT [WatchPosition_employee]
 GO
-
-ALTER DATABASE [Schedule] SET DB_CHAINING OFF 
+ALTER TABLE [dbo].[WatchPositions]  WITH CHECK ADD  CONSTRAINT [WatchShift_watch_positions] FOREIGN KEY([WatchShift_ID])
+REFERENCES [dbo].[WatchShifts] ([ID])
 GO
-
-ALTER DATABASE [Schedule] SET  READ_WRITE 
+ALTER TABLE [dbo].[WatchPositions] CHECK CONSTRAINT [WatchShift_watch_positions]
 GO
-
-
