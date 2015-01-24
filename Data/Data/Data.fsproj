@@ -37,6 +37,8 @@
     <Compile Include="ModelPrototypes\Request.fs" />
     <Compile Include="ModelPrototypes\Shift.fs" />
     <Compile Include="ModelPrototypes\Team.fs" />
+    <Compile Include="ModelPrototypes\AccessLog.fs" />
+    <Compile Include="ModelPrototypes\ChangeLog.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.1\Framework\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
