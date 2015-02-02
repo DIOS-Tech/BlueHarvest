@@ -5,4 +5,5 @@ open System
 
 
 [<CLIMutable>]
-type Team = {name: string; description: string; manager: virtual Employee}
+type Team = {name: string; 
+            description: string; manager: virtual Employee}
