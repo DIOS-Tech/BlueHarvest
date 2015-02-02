@@ -1,6 +1,6 @@
 ﻿
 
-namespace Data
+namespace BlueHarvest
 open System
 
 // need to enforce phone numbers here

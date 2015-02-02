@@ -1,6 +1,6 @@
 ﻿
 
-namespace Data
+namespace BlueHarvest
 open System
 
 [<CLIMutable>]
