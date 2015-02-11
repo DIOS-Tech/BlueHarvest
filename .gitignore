@@ -181,3 +181,10 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# JavaScript / Node / etc...
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components

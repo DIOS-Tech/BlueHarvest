@@ -1,0 +1,28 @@
+.quick-launch-container {
+  text-align: middle;
+  margin: 0 auto;
+  width: 525px;
+  height: 245px;
+  margin-top: 150px; 
+  padding: 20px;
+  border: 2px solid black;
+  background-color: #ddd;
+}
+
+.quick-launch-item {
+  border: 2px solid #555;
+  background-color: #eee;
+  width: 150px;
+  height: 100px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.quick-launch-item:hover {
+  background-color: #aaa;
+}
