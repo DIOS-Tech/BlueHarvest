@@ -2,11 +2,18 @@
 
 An employee management system
 
-##Status
+###Status
 
-Still in the early stages of development and discussion
+Still in the early stages of discussion, no real useful stuff here yet.
 
-##License
+###Project Layout
+
+BlueHarvest.NET - A .NET based ASP.NET MVC and Web API application
+BlueHarvest.JS - An io.js / Atom-Shell prototype sandbox
+Database - This contains the initial SQL Server db script as well as an 
+SQL Server backup that also provides a database diagram.
+
+###License
 
 GNU GPL v2
 
