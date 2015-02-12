@@ -1,6 +1,6 @@
-var Bluey = (function($) {
-  "use strict";
+'use strict';
 
+var Bluey = (function($) {
   var my = {};
 
   var remote = require('remote'),

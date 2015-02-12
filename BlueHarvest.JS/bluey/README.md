@@ -16,18 +16,20 @@ app.
 
 More to come...
 
-###Development Requirements
+###Usage
 
-Atom-Shell - A shell based on io.js and Chrome.
-6to5 - Gonna take advantage of all that ES6 hotness!
-Bower - package management for various libraries such as React, jQuery, 
-lodash, etc...
+You need io.js and Atom-Shell
 
-###NOTE
+- open command line to bluey root
+- type: npm install
+- type: bower install
+- type: grunt
 
-Dependencies installed via bower have not been checked in. If you want to use 
-this you'll need to issue a bower init command within the root of this 
-directory, doing this will install all of the dependencies. 
+For now everything in the bluey folder would be copied to atom-shell/resources/app.
+The execute atom.exe which is in the root of the atom-shell folder.
+
+I'm going to see if I can make a grunt task (or find a plugin) to make this
+easier.
 
 ###License
 

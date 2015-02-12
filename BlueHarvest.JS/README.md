@@ -12,4 +12,3 @@ harvey - An io.js based web api prototype
 
 - Atom-Shell 0.21.2 &lt;https://github.com/atom/atom-shell&gt;
 - io.js 1.1.0 &lt;https://iojs.org&gt;
-- 6to5 &lt;http://6to5.org&gt;
