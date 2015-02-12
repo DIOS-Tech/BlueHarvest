@@ -9,7 +9,10 @@ open Microsoft.FSharp.Linq
 module SQL =
 
   //FIXME: This is likely not the connection string you'd use on your system, LOL!
-  type dbSchema = SqlDataConnection<"Data Source=.\SQLEXPRESS;Initial Catalog=BlueHarvest;Integrated Security=SSPI;">
+  
+  //"Data Source=.\SQLEXPRESS;Initial Catalog=BlueHarvest;Integrated Security=SSPI;"
+
+  type dbSchema = SqlDataConnection<ConnectionStringName="DefaultConnection", ConfigFile="../WebApp/web.config">
   let db = dbSchema.GetDataContext()
 
   // At this point typing db and hitting . will show you all the tables
@@ -19,3 +22,4 @@ module SQL =
   //
   // I could see the need for exposing generic data models such that one could
   // swap out back end databases and not have to touch the consumers.
+  
