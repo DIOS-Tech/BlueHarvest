@@ -59,14 +59,56 @@ var Bluey = (function ($) {
     }
   });
 
+  var Login = React.createClass({
+    displayName: "Login",
+    userNameHandler: function (e) {
+      this.setState({ userName: e.target.value });
+    },
+    passwordHandler: function (e) {
+      this.setState({ password: e.target.value });
+    },
+    submitHandler: function (e) {},
+    render: function () {
+      return React.createElement(
+        "div",
+        { className: "login-container" },
+        React.createElement(
+          "div",
+          { className: "login-container-title" },
+          "Blue Harvest"
+        ),
+        React.createElement(
+          "span",
+          null,
+          "Username:"
+        ),
+        React.createElement("br", null),
+        React.createElement("input", { type: "text", onChange: this.userNameHandler }),
+        React.createElement("br", null),
+        React.createElement(
+          "span",
+          null,
+          "Password:"
+        ),
+        React.createElement("br", null),
+        React.createElement("input", { type: "password", onChange: this.passwordHandler }),
+        React.createElement("br", null),
+        React.createElement("br", null),
+        React.createElement("input", { type: "submit", className: "login-submit-button", onClick: this.submitHandler })
+      );
+    }
+  });
+
   $(document).ready(function () {
     browser.openDevTools();
 
-    React.render(React.createElement(QuickLaunch, { items: quickLaunchItems }), document.getElementById("ui"));
+    /*<QuickLaunch items={quickLaunchItems} />,*/
+    React.render(React.createElement(Login, null), document.getElementById("ui"));
   });
 
   return my;
 })(jQuery);
 
 module.exports = Bluey;
+// do something here so that the user is logged in
 

@@ -8,7 +8,6 @@
   border: 2px solid black;
   background-color: #ddd;
 }
-
 .quick-launch-item {
   border: 2px solid #555;
   background-color: #eee;
@@ -25,4 +24,23 @@
 }
 .quick-launch-item:hover {
   background-color: #aaa;
+}
+.login-container-title {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 18pt;
+  font-weight: bold;
+}
+.login-container {
+  width: 180px;
+  height: 150px;
+  /*border: 2px solid red;*/
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30%;
+}
+.login-submit-button {
+  position: absolute;
+  right: 8px;
+  bottom: 0px;
 }
