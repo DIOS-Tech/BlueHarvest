@@ -9,7 +9,7 @@ open Microsoft.FSharp.Linq
 module SQL =
 
   //FIXME: This is likely not the connection string you'd use on your system, LOL!
-  type dbSchema = SqlDataConnection<"Data Source=.\SQLEXPRESS2014;Initial Catalog=BlueHarvest;Integrated Security=SSPI;">
+  type dbSchema = SqlDataConnection<"Data Source=.\SQLEXPRESS;Initial Catalog=BlueHarvest;Integrated Security=SSPI;">
   let db = dbSchema.GetDataContext()
 
   // At this point typing db and hitting . will show you all the tables
