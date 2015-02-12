@@ -50,11 +50,41 @@ var Bluey = (function($) {
     }
   });
 
+  var Login = React.createClass({
+    userNameHandler: function(e) {
+      this.setState({ userName: e.target.value });
+    },
+    passwordHandler: function(e) {
+      this.setState({ password: e.target.value });
+    },
+    submitHandler: function(e) {
+      // do something here so that the user is logged in
+    },
+    render: function() {
+      return (
+        <div className="login-container">
+         <div className="login-container-title">Blue Harvest</div>
+         <span>Username:</span>
+         <br />
+         <input type="text" onChange={this.userNameHandler}></input>
+         <br />         
+         <span>Password:</span>
+         <br />
+         <input type="password" onChange={this.passwordHandler}></input>
+         <br />
+         <br />
+         <input type="submit" className="login-submit-button" onClick={this.submitHandler}></input>
+        </div>
+      );
+    }
+  });
+
   $(document).ready(() => {
     browser.openDevTools();
 
+    /*<QuickLaunch items={quickLaunchItems} />,*/
     React.render(
-      <QuickLaunch items={quickLaunchItems} />,
+      <Login />,
       document.getElementById("ui") 
     );
   });
