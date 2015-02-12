@@ -29,7 +29,7 @@ type BundleConfig() =
                     "~/Scripts/respond.js"))
 
     bundles.Add(StyleBundle("~/Content/css").Include(
-                    "~/Content/bootstrap.css",
+                    "~/Content/cosmo-bootstrap.css",
                     "~/Content/site.css"))
 
 /// Route for ASP.NET MVC applications
