@@ -4,10 +4,17 @@ open System
 open System.Collections.Generic
 
 module Models = 
+  
+  [<CLIMutable>]
+  type Team = 
+    { ID : int
+      Name : string
+      Description : string }
 
   [<CLIMutable>]
   type Employee = 
     { ID : int
+      Team : Team
       UserName : string
       Password : string // This will be encrypted if used but since we will be
                         // using ASP.NET Identity as it stands we won't have to
@@ -22,12 +29,12 @@ module Models =
       EndDate : DateTime
       IsManager : bool
       Deactivated : bool }
-
-  and Team = 
+   
+  [<CLIMutable>]
+  type AddressType = 
     { ID : int
-      Name : string
-      Description : string }
-      
+      Name : string }
+
   [<CLIMutable>]
   type Address = 
     { ID : int
@@ -38,10 +45,6 @@ module Models =
       City : string
       State : string
       ZipCode : int }
-
-  and AddressType = 
-    { ID : int
-      Name : string }
 
   [<CLIMutable>]
   type Task =
@@ -77,14 +80,15 @@ module Models =
       Notes : string }
 
   [<CLIMutable>]
+  type PhoneType =
+    { ID : int
+      Name : string }
+
+  [<CLIMutable>]
   type PhoneNumber = 
     { PhoneNumber : string
       PhoneType : PhoneType
       Employee : Employee }
-
-  and PhoneType =
-    { ID : int
-      Name : string }
 
   [<CLIMutable>]
   type OnCallEntry = 
