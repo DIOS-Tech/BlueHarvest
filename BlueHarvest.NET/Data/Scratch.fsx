@@ -76,3 +76,4 @@ EmployeeData.GetSamples()
 |> Seq.map(fun e -> e.DisplayName)
 |> Seq.toList
 
+EmployeeData.GetSamples().Length

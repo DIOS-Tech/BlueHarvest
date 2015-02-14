@@ -23,7 +23,11 @@ You need io.js and Atom-Shell
 - open command line to bluey root
 - type: npm install
 - type: bower install
+- npm install -g grunt-cli
 - type: grunt
+
+If you make changes to bluey.es6.js you need to run grunt from the command line
+to transpile to es5. 
 
 For now everything in the bluey folder would be copied to atom-shell/resources/app.
 The execute atom.exe which is in the root of the atom-shell folder.
