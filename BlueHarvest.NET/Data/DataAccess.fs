@@ -14,7 +14,7 @@ module SQL =
   // Tables
   let Addresses = db.Address
   type Address = dbSchema.ServiceTypes.Address
-
+  
   let AddressTypes = db.AddressType
   type AddressType = dbSchema.ServiceTypes.AddressType
 
@@ -26,7 +26,7 @@ module SQL =
 
   let OnCalls = db.OnCall
   type OnCall = dbSchema.ServiceTypes.OnCall
-
+  
   let PhoneNumbers = db.PhoneNumber
   type PhoneNumber = dbSchema.ServiceTypes.PhoneNumber
 
