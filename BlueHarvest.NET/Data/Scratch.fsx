@@ -2,17 +2,22 @@
 // This code is for F# Interactive. 
 // This is a sandbox to play with various things.
 
+// Evaluate the entire file in F# Interactive to bootstrap the
+// database in it's current form.
+
 #r "System.dll"
 #r "System.Data.Linq"
 #r "FSharp.Data.TypeProviders.dll"
+#r "../packages/FSharp.Data.2.1.1/lib/net40/FSharp.Data.dll"
 
 open System
 open System.Data
 open System.Data.Linq
-open FSharp.Data
 open Microsoft.FSharp.Data.TypeProviders
 open Microsoft.FSharp.Linq
+open FSharp.Data
 
+type EmployeeData = JsonProvider<"../../Database/data.json">
 type dbSchema = SqlDataConnection<ConnectionStringName="DefaultConnection", ConfigFile="../WebApp/web.config">
 let db = dbSchema.GetDataContext()
   
@@ -94,65 +99,33 @@ let GetTeam(name) =
        exactlyOne
   }
 
-//let NewShift(startTime, endTime, day) =
-//  let shift = new Shift(StartTime = startTime, EndTime = endTime, Day = day)
-//
-//  Shifts.InsertOnSubmit(shift)
-//  Shifts.Context.SubmitChanges()
+// Bootstrap the db quick and dirty
+let BootstrapEmployees() = 
 
-//////////////////////
-// JSON STUFF BELOW //
-//////////////////////
+  BootstrapPhoneTypes()
+  BootstrapTeams()
 
-#r "../packages/FSharp.Data.2.1.1/lib/net40/FSharp.Data.dll"
+  for e in EmployeeData.GetSamples() do
+    Console.WriteLine("Adding: {0}", e.DisplayName)
+    let emp = new Employee()
+    emp.UserName <- e.UserName
+    emp.DisplayName <- e.DisplayName
+    emp.JobTitle <- e.JobTitle
+    emp.Company <- e.Company
+    emp.EmailAddress <- e.EmailAddress
+    emp.StartDate <- e.StartDate
+    
+    Employees.InsertOnSubmit(emp)
+    Employees.Context.SubmitChanges()
 
-//open System
-open FSharp.Data
+    e.PhoneNumbers
+    |> Seq.iter (fun pn -> emp.PhoneNumber.Add(new PhoneNumber(PhoneTypeID = GetPhoneType(pn.Type).Id, Number = pn.Number)))
 
-type EmployeeData = JsonProvider<"../../Database/data.json">
+    e.Shifts
+    |> Seq.iter (fun s -> emp.Shift.Add(new Shift(StartTime = s.StartTime.TimeOfDay, EndTime = s.EndTime.TimeOfDay, Day = s.Day)))
 
-EmployeeData.GetSamples()
-//|> Seq.iter (fun e -> AddEmployee(e.UserName, e.DisplayName, e.JobTitle, e.Company, e.EmailAddress, e.StartDate))
-|> Seq.map(fun e -> e.DisplayName)
-|> Seq.toList
+    emp.Team <- GetTeam(e.Team.Name)
 
-EmployeeData.GetSamples().Length
+    Employees.Context.SubmitChanges()
 
-EmployeeData.GetSamples()
-|> Seq.map(fun x -> x.Team)
-|> Seq.toList
-
-/////////////////
-// OTHER STUFF //
-/////////////////
-
-//let workPhoneType = GetPhoneType("Work")
-
-let firstEmp = EmployeeData.GetSamples() |> Seq.head
-
-let emp = new Employee()
-emp.UserName <- firstEmp.UserName
-emp.DisplayName <- firstEmp.DisplayName
-emp.JobTitle <- firstEmp.JobTitle
-emp.Company <- firstEmp.Company
-emp.EmailAddress <- firstEmp.EmailAddress
-emp.StartDate <- firstEmp.StartDate
-
-Employees.InsertOnSubmit(emp)
-Employees.Context.SubmitChanges()
-
-firstEmp.PhoneNumbers
-|> Seq.iter (fun pn -> emp.PhoneNumber.Add(new PhoneNumber(PhoneTypeID = GetPhoneType(pn.Type).Id, Number = pn.Number)))
-
-Employees.Context.SubmitChanges()
-
-firstEmp.Shifts
-|> Seq.iter (fun s -> emp.Shift.Add(new Shift(StartTime = s.StartTime.TimeOfDay, EndTime = s.EndTime.TimeOfDay, Day = s.Day)))
-
-Employees.Context.SubmitChanges()
-
-emp.Team <- GetTeam(firstEmp.Team.Name)
-
-Employees.Context.SubmitChanges()
-
-emp
+BootstrapEmployees()
