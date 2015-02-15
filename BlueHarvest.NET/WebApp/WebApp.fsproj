@@ -18,6 +18,10 @@
     <TargetFrameworkProfile />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
     <Name>WebApp</Name>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressSSLPort>44302</IISExpressSSLPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,9 +82,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>48213</DevelopmentServerPort>
+          <DevelopmentServerPort>42000</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:48213/</IISUrl>
+          <IISUrl>https://localhost:44302/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -120,6 +124,22 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+	<Content Include="Scripts\datatables\css\jquery.dataTables.css" />
+	<Content Include="Scripts\datatables\css\jquery.dataTables.min.css" />
+	<Content Include="Scripts\datatables\css\jquery.dataTables_themeroller.css" />
+	<Content Include="Scripts\datatables\images\back_disabled.png" />
+	<Content Include="Scripts\datatables\images\back_enabled.png" />
+	<Content Include="Scripts\datatables\images\back_enabled_hover.png" />
+	<Content Include="Scripts\datatables\images\forward_disabled.png" />
+	<Content Include="Scripts\datatables\images\forward_enabled.png" />
+	<Content Include="Scripts\datatables\images\forward_enabled_hover.png" />
+	<Content Include="Scripts\datatables\images\sort_asc.png" />
+	<Content Include="Scripts\datatables\images\sort_asc_disabled.png" />
+	<Content Include="Scripts\datatables\images\sort_both.png" />
+	<Content Include="Scripts\datatables\images\sort_desc.png" />
+	<Content Include="Scripts\datatables\images\sort_desc_disabled.png" />
+	<Content Include="Scripts\datatables\js\jquery.dataTables.js" />
+	<Content Include="Scripts\datatables\js\jquery.dataTables.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

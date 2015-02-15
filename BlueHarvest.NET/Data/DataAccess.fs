@@ -58,5 +58,10 @@ module SQL =
        exactlyOne
      }
 
-  let AddNewEmployee() =
-    ()
+  let AddEmployee(userName, displayName, jobTitle, company, emailAddress, startDate) =
+    let e = new Employee(UserName = userName, DisplayName = displayName, 
+                          JobTitle = jobTitle, Company = company, 
+                          EmailAddress = emailAddress, StartDate = startDate)
+
+    Employees.InsertOnSubmit(e)
+    Employees.Context.SubmitChanges()
