@@ -1,5 +1,6 @@
 ﻿
-// This code is for F# Interactive. This is a sandbox to play with various things.
+// This code is for F# Interactive. 
+// This is a sandbox to play with various things.
 
 #r "System.dll"
 #r "System.Data.Linq"
@@ -60,6 +61,45 @@ let AddPhoneNumber(employee : Employee, phoneType : PhoneType, number : string) 
   employee.PhoneNumber.Add(phoneNumber)
   Employees.Context.SubmitChanges()
 
+let BootstrapPhoneTypes() =
+  let phoneTypes = [| new PhoneType(Name = "Work");
+                      new PhoneType(Name = "Cell");
+                      new PhoneType(Name = "Home");
+                      new PhoneType(Name = "Other") |]
+
+  PhoneTypes.InsertAllOnSubmit(phoneTypes)
+  PhoneTypes.Context.SubmitChanges()
+
+let GetPhoneType(name) =
+  query {
+    for p in PhoneTypes do
+       where (p.Name = name)
+       select p
+       exactlyOne
+  }
+
+let BootstrapTeams() =
+  let teams = [| new Team(Name = "Ops", Description = "Network Operations");
+                 new Team(Name = "Eng", Description = "Engineering");
+                 new Team(Name = "IA", Description = "Information Assurance") |]
+
+  Teams.InsertAllOnSubmit(teams)
+  Teams.Context.SubmitChanges()
+
+let GetTeam(name) =
+  query {
+    for t in Teams do
+       where (t.Name = name)
+       select t
+       exactlyOne
+  }
+
+//let NewShift(startTime, endTime, day) =
+//  let shift = new Shift(StartTime = startTime, EndTime = endTime, Day = day)
+//
+//  Shifts.InsertOnSubmit(shift)
+//  Shifts.Context.SubmitChanges()
+
 //////////////////////
 // JSON STUFF BELOW //
 //////////////////////
@@ -77,3 +117,42 @@ EmployeeData.GetSamples()
 |> Seq.toList
 
 EmployeeData.GetSamples().Length
+
+EmployeeData.GetSamples()
+|> Seq.map(fun x -> x.Team)
+|> Seq.toList
+
+/////////////////
+// OTHER STUFF //
+/////////////////
+
+//let workPhoneType = GetPhoneType("Work")
+
+let firstEmp = EmployeeData.GetSamples() |> Seq.head
+
+let emp = new Employee()
+emp.UserName <- firstEmp.UserName
+emp.DisplayName <- firstEmp.DisplayName
+emp.JobTitle <- firstEmp.JobTitle
+emp.Company <- firstEmp.Company
+emp.EmailAddress <- firstEmp.EmailAddress
+emp.StartDate <- firstEmp.StartDate
+
+Employees.InsertOnSubmit(emp)
+Employees.Context.SubmitChanges()
+
+firstEmp.PhoneNumbers
+|> Seq.iter (fun pn -> emp.PhoneNumber.Add(new PhoneNumber(PhoneTypeID = GetPhoneType(pn.Type).Id, Number = pn.Number)))
+
+Employees.Context.SubmitChanges()
+
+firstEmp.Shifts
+|> Seq.iter (fun s -> emp.Shift.Add(new Shift(StartTime = s.StartTime.TimeOfDay, EndTime = s.EndTime.TimeOfDay, Day = s.Day)))
+
+Employees.Context.SubmitChanges()
+
+emp.Team <- GetTeam(firstEmp.Team.Name)
+
+Employees.Context.SubmitChanges()
+
+emp

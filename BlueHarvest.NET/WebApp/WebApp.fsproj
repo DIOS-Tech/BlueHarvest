@@ -115,6 +115,9 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <StartupObject>WebApp</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
 	<Content Include="Assets\CSS\cosmo-bootstrap.css" />
