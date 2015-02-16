@@ -12,15 +12,13 @@ open Microsoft.AspNet.Identity
 open Microsoft.AspNet.Identity.Owin
 open Microsoft.Owin.Security
 
+open BlueHarvest.DataAccess.SQL
+
 type EmployeeController() =
   inherit Controller()
 
   member this.Index () =
     this.View()
-
-
-
-
 
   //
   // ET: /Employee/Create
@@ -31,5 +29,5 @@ type EmployeeController() =
   // POST: /Employee/Create
   [<HttpPost>]
   [<ValidateAntiForgeryToken>]
-  member this.Create (employee:BlueHarvest.Models.Employee) =
+  member this.Create (employee) =
     this.View()
