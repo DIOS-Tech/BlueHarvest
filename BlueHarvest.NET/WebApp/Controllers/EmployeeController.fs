@@ -14,6 +14,7 @@ open Microsoft.Owin.Security
 
 open BlueHarvest.DataAccess.SQL
 
+[<Authorize>]
 type EmployeeController() =
   inherit Controller()
 
@@ -22,12 +23,12 @@ type EmployeeController() =
 
   //
   // ET: /Employee/Create
-  member this.Create () =
-    this.View()
+  //member this.Create () =
+  //  this.View()
 
   //
   // POST: /Employee/Create
-  [<HttpPost>]
-  [<ValidateAntiForgeryToken>]
-  member this.Create (employee) =
-    this.View()
+  //[<HttpPost>]
+  //[<ValidateAntiForgeryToken>]
+  //member this.Create (employee) =
+  //  this.View()
