@@ -1,4 +1,4 @@
-﻿module DataAccess
+﻿namespace BlueHarvest.DataAccess
 
 open System
 open System.Data

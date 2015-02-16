@@ -1,4 +1,4 @@
-﻿namespace Data
+﻿namespace BlueHarvest.Models
 
 open System
 open System.Collections.Generic

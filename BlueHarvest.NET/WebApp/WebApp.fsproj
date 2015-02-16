@@ -120,16 +120,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-	<Content Include="Assets\CSS\cosmo-bootstrap.css" />
-	<Content Include="Assets\CSS\cosmo-bootstrap.min.css" />
+    <Content Include="Assets\CSS\cosmo-bootstrap.css" />
+    <Content Include="Assets\CSS\cosmo-bootstrap.min.css" />
     <Content Include="Assets\CSS\Site.css" />
-	<Content Include="Assets\Scripts\main.js" />
+    <Content Include="Assets\Scripts\main.js" />
     <Compile Include="Infrastructure\Infrastructure.fs" />
     <Compile Include="Models\Models.fs" />
     <Compile Include="Controllers\HomeController.fs" />
     <Compile Include="Controllers\AccountController.fs" />
     <Compile Include="Controllers\ManageController.fs" />
     <Compile Include="Controllers\ValuesController.fs" />
+    <Compile Include="Controllers\EmployeeController.fs" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -286,6 +287,13 @@
     <Reference Include="WebGrease">
       <HintPath>$(SolutionDir)\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.fsproj">
+      <Name>Data</Name>
+      <Project>{c13af01e-38e0-439b-bc99-a0b73c4b80b6}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="BeforeBuild">
     <MSBuild.ExtensionPack.FileSystem.File TaskAction="Replace" RegexPattern="&lt;dependentAssembly&gt;([\s]+.)&lt;assemblyIdentity name=&quot;FSharp\.Core&quot; publicKeyToken=&quot;b03f5f7f11d50a3a&quot; culture=&quot;neutral&quot; \/&gt;([\s\S]+?)&lt;\/dependentAssembly&gt;" RegexOptionList="IgnoreCase|Singleline" Replacement="&lt;dependentAssembly&gt;&#xD;&#xA;        &lt;assemblyIdentity name=&quot;FSharp.Core&quot; publicKeyToken=&quot;b03f5f7f11d50a3a&quot; culture=&quot;neutral&quot; /&gt;&#xD;&#xA;        &lt;bindingRedirect oldVersion=&quot;0.0.0.0-$(TargetFSharpCoreVersion)&quot; newVersion=&quot;$(TargetFSharpCoreVersion)&quot;/&gt;&#xD;&#xA;      &lt;/dependentAssembly&gt;" Files="web.config" />
