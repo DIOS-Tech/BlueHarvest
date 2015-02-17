@@ -1,389 +1,166 @@
 [
-	{
-		"userName": "jsmith",
-		"displayName": "Smith, John Q.",
-		"jobTitle": "Sr. Network Engineer",
+    {
+        "userName": "sfrench",
+        "displayName": "French, Sally H.",
+        "jobTitle": "Software Architect",
+        "company": "Foobar Systems",
+        "emailAddress": "frenchs@foobar-systems.com",
+        "startDate": "11/20/2010",
+        "manager": "true",
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1219"
+            },
+            {
+                "type": "Cell",
+                "number": "703-238-1658"
+            }
+        ],
+        "shifts": [
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "1"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "2"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "3"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "4"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "5"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "IA",
+            "description": "Information Assurance"
+        }
+    },
+    {
+        "userName": "phunt",
+        "displayName": "Hunt, Peter Q.",
+        "jobTitle": "Software Architect",
+        "company": "Foobar Systems",
+        "emailAddress": "huntp@foobar-systems.com",
+        "startDate": "6/25/2005",
+        "manager": "true",
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-3339"
+            },
+            {
+                "type": "Cell",
+                "number": "703-238-1658"
+            }
+        ],
+        "shifts": [
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "1"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "2"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "3"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "4"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "5"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Eng",
+            "description": "Software Engineering"
+        }
+    },
+    {
+		"userName": "fsavage",
+		"displayName": "Savage, Fred Q.",
+		"jobTitle": "Network Manager",
 		"company": "Foobar Systems",
-		"emailAddress": "smithj@foobar-systems.com",
-		"startDate": "1/21/2012",
+		"emailAddress": "savagef@foobar-systems.com",
+        "startDate": "1/7/2000",
+        "manager":  "true",
 		"phoneNumbers": [
 			{
 				"type": "Work",
-				"number": "703-456-1844"
+				"number": "703-456-2209"
 			},
 			{
 				"type": "Cell",
-				"number": "703-239-1678"
+				"number": "703-554-9713"
 			}
 		],
 		"shifts": [
 			{
-				"startTime": "06:00",
-				"endTime": "14:30",
+				"startTime": "09:00",
+				"endTime": "18:30",
 				"day": "1"
 			},
 			{
-				"startTime": "06:00",
-				"endTime": "14:30",
+				"startTime": "09:00",
+				"endTime": "18:30",
 				"day": "2"
 			},
 			{
-				"startTime": "06:00",
-				"endTime": "14:30",
+				"startTime": "09:00",
+				"endTime": "18:30",
 				"day": "3"
 			},
 			{
-				"startTime": "06:00",
-				"endTime": "14:30",
+				"startTime": "09:00",
+				"endTime": "18:30",
 				"day": "4"
 			},
 			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"Addresses": [
-			{
-				"addressType": "Work",
-				"streetAddress": "1234 Anywhere Rd",
-				"unit": "Suite 570",
-				"city": "Smallville",
-				"state": "Va",
-				"zipCode": "22155"
-			}
-		],
-		"Team": {
-			"name": "Ops",
-			"description": "Network Operations"
-		}
-	},
-	{ 
-		"userName": "mjones",
-		"displayName": "Jones, Mike L.",
-		"jobTitle": "Sr. Information Security Analyst",
-		"company": "Foobar Systems",
-		"emailAddress": "jonesm@foobar-systems.com",
-		"startDate": "3/1/2014",
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"phoneNumbers": [
-			{
-				"type": "Work",
-				"number": "703-456-8763"
-			},
-			{
-				"type": "Cell",
-				"number": "703-333-5612"
-			}
-		],
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"Addresses": [
-			{
-				"addressType": "Work",
-				"streetAddress": "1234 Anywhere Rd",
-				"unit": "Suite 570",
-				"city": "Smallville",
-				"state": "Va",
-				"zipCode": "22155"
-			}
-		],
-		"Team": {
-			"name": "IA",
-			"description": "Information Assurance"
-		}
-	},
-	{ 
-		"userName": "jfox",
-		"displayName": "Fox, James S.",
-		"jobTitle": "Sr. Information Security Officer",
-		"company": "Foobar Systems",
-		"emailAddress": "jfox@foobar-systems.com",
-		"startDate": "6/25/2001",
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"phoneNumbers": [
-			{
-				"type": "Work",
-				"number": "703-456-0001"
-			},
-			{
-				"type": "Cell",
-				"number": "703-234-9934"
-			}
-		],
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"Addresses": [
-			{
-				"addressType": "Work",
-				"streetAddress": "1234 Anywhere Rd",
-				"unit": "Suite 570",
-				"city": "Smallville",
-				"state": "Va",
-				"zipCode": "22155"
-			}
-		],
-		"Team": {
-			"name": "IA",
-			"description": "Information Assurance"
-		}
-	},
-	{ 
-		"userName": "jjohnson",
-		"displayName": "Johnson, Jonathan F.",
-		"jobTitle": "Sr. Software Engineer",
-		"company": "Foobar Systems",
-		"emailAddress": "jjohnson@foobar-systems.com",
-		"startDate": "8/14/2006",
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"phoneNumbers": [
-			{
-				"type": "Work",
-				"number": "703-456-1117"
-			},
-			{
-				"type": "Cell",
-				"number": "703-237-0032"
-			}
-		],
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"Addresses": [
-			{
-				"addressType": "Work",
-				"streetAddress": "1234 Anywhere Rd",
-				"unit": "Suite 570",
-				"city": "Smallville",
-				"state": "Va",
-				"zipCode": "22155"
-			}
-		],
-		"Team": {
-			"name": "Eng",
-			"description": "Engineering"
-		}
-	},
-	{ 
-		"userName": "sdavis",
-		"displayName": "Davis, Sammy Q.",
-		"jobTitle": "Sr. Network Engineer",
-		"company": "Foobar Systems",
-		"emailAddress": "sdavis@foobar-systems.com",
-		"startDate": "10/07/2008",
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "5"
-			}
-		],
-		"phoneNumbers": [
-			{
-				"type": "Work",
-				"number": "703-456-2844"
-			},
-			{
-				"type": "Cell",
-				"number": "703-235-0999"
-			}
-		],
-		"shifts": [
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "1"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "2"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "3"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
-				"day": "4"
-			},
-			{
-				"startTime": "06:00",
-				"endTime": "14:30",
+				"startTime": "09:00",
+				"endTime": "18:30",
 				"day": "5"
 			}
 		],
@@ -403,12 +180,313 @@
 		}
 	},
     {
+        "userName": "jsmith",
+        "displayName": "Smith, John Q.",
+        "jobTitle": "Sr. Network Engineer",
+        "company": "Foobar Systems",
+        "emailAddress": "smithj@foobar-systems.com",
+        "startDate": "1/21/2012",
+        "manager": "false",
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1844"
+            },
+            {
+                "type": "Cell",
+                "number": "703-239-1678"
+            }
+        ],
+        "shifts": [
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "1"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "2"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "3"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "4"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "18:30",
+                "day": "5"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
+    },
+    {
+        "userName": "mjones",
+        "displayName": "Jones, Mike L.",
+        "jobTitle": "Sr. Information Security Analyst",
+        "company": "Foobar Systems",
+        "emailAddress": "jonesm@foobar-systems.com",
+        "startDate": "3/1/2014",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-8763"
+            },
+            {
+                "type": "Cell",
+                "number": "703-333-5612"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "IA",
+            "description": "Information Assurance"
+        }
+    },
+    {
+        "userName": "jfox",
+        "displayName": "Fox, James S.",
+        "jobTitle": "Sr. Information Security Officer",
+        "company": "Foobar Systems",
+        "emailAddress": "jfox@foobar-systems.com",
+        "startDate": "6/25/2001",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-0001"
+            },
+            {
+                "type": "Cell",
+                "number": "703-234-9934"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "IA",
+            "description": "Information Assurance"
+        }
+    },
+    {
+        "userName": "jjohnson",
+        "displayName": "Johnson, Jonathan F.",
+        "jobTitle": "Sr. Software Engineer",
+        "company": "Foobar Systems",
+        "emailAddress": "jjohnson@foobar-systems.com",
+        "startDate": "8/14/2006",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1117"
+            },
+            {
+                "type": "Cell",
+                "number": "703-237-0032"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Eng",
+            "description": "Software Engineering"
+        }
+    },
+    {
+        "userName": "sdavis",
+        "displayName": "Davis, Sammy Q.",
+        "jobTitle": "Sr. Network Engineer",
+        "company": "Foobar Systems",
+        "emailAddress": "sdavis@foobar-systems.com",
+        "startDate": "10/07/2008",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "18:00",
+                "endTime": "02:30",
+                "day": "1"
+            },
+            {
+                "startTime": "18:00",
+                "endTime": "02:30",
+                "day": "2"
+            },
+            {
+                "startTime": "18:00",
+                "endTime": "02:30",
+                "day": "3"
+            },
+            {
+                "startTime": "18:00",
+                "endTime": "02:30",
+                "day": "4"
+            },
+            {
+                "startTime": "18:00",
+                "endTime": "02:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-2844"
+            },
+            {
+                "type": "Cell",
+                "number": "703-235-0999"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
+    },
+    {
         "userName": "fwilliams",
         "displayName": "Williams, Frank E.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
         "emailAddress": "fwilliams@foobar-systems.com",
         "startDate": "1/03/2010",
+        "manager": "false",
         "shifts": [
             {
                 "startTime": "06:00",
@@ -446,33 +524,6 @@
                 "number": "703-234-0913"
             }
         ],
-        "shifts": [
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "1"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "2"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "3"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "4"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "5"
-            }
-        ],
         "Addresses": [
             {
                 "addressType": "Work",
@@ -495,30 +546,31 @@
         "company": "Foobar Systems",
         "emailAddress": "tperry@foobar-systems.com",
         "startDate": "2/12/2013",
+        "manager": "false",
         "shifts": [
             {
-                "startTime": "06:00",
-                "endTime": "14:30",
+                "startTime": "18:00",
+                "endTime": "02:30",
                 "day": "1"
             },
             {
-                "startTime": "06:00",
-                "endTime": "14:30",
+                "startTime": "18:00",
+                "endTime": "02:30",
                 "day": "2"
             },
             {
-                "startTime": "06:00",
-                "endTime": "14:30",
+                "startTime": "18:00",
+                "endTime": "02:30",
                 "day": "3"
             },
             {
-                "startTime": "06:00",
-                "endTime": "14:30",
+                "startTime": "18:00",
+                "endTime": "02:30",
                 "day": "4"
             },
             {
-                "startTime": "06:00",
-                "endTime": "14:30",
+                "startTime": "18:00",
+                "endTime": "02:30",
                 "day": "5"
             }
         ],
@@ -530,33 +582,6 @@
             {
                 "type": "Cell",
                 "number": "703-116-2340"
-            }
-        ],
-        "shifts": [
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "1"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "2"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "3"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "4"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "5"
             }
         ],
         "Addresses": [
@@ -581,6 +606,7 @@
         "company": "Foobar Systems",
         "emailAddress": "csimmons@foobar-systems.com",
         "startDate": "5/20/2013",
+        "manager": "false",
         "shifts": [
             {
                 "startTime": "06:00",
@@ -618,33 +644,6 @@
                 "number": "703-564-8970"
             }
         ],
-        "shifts": [
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "1"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "2"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "3"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "4"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "5"
-            }
-        ],
         "Addresses": [
             {
                 "addressType": "Work",
@@ -667,6 +666,7 @@
         "company": "Foobar Systems",
         "emailAddress": "sfoster@foobar-systems.com",
         "startDate": "8/10/2010",
+        "manager": "false",
         "shifts": [
             {
                 "startTime": "06:00",
@@ -704,33 +704,6 @@
                 "number": "703-436-2134"
             }
         ],
-        "shifts": [
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "1"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "2"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "3"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "4"
-            },
-            {
-                "startTime": "06:00",
-                "endTime": "14:30",
-                "day": "5"
-            }
-        ],
         "Addresses": [
             {
                 "addressType": "Work",
@@ -753,6 +726,7 @@
         "company": "Foobar Systems",
         "emailAddress": "carterj@foobar-systems.com",
         "startDate": "12/1/2009",
+        "manager": "false",
         "shifts": [
             {
                 "startTime": "09:00",
@@ -790,6 +764,39 @@
                 "number": "703-112-5564"
             }
         ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Eng",
+            "description": "Software Engineering"
+        }
+    },
+    {
+        "userName": "ggordon",
+        "displayName": "Gordon, George F.",
+        "jobTitle": "Sr. Network Engineer",
+        "company": "Foobar Systems",
+        "emailAddress": "gordong@foobar-systems.com",
+        "startDate": "1/21/2012",
+        "manager": "false",
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-8901"
+            },
+            {
+                "type": "Cell",
+                "number": "703-234-1644"
+            }
+        ],
         "shifts": [
             {
                 "startTime": "06:00",
@@ -833,836 +840,543 @@
         }
     },
     {
-	    "userName": "ggordon",
-	    "displayName": "Gordon, George F.",
-	    "jobTitle": "Sr. Network Engineer",
-	    "company": "Foobar Systems",
-	    "emailAddress": "gordong@foobar-systems.com",
-	    "startDate": "1/21/2012",
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-8901"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-234-1644"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
-    },
-    { 
-	    "userName": "psmith",
-	    "displayName": "Smith, Patty K.",
-	    "jobTitle": "Sr. Information Security Analyst",
-	    "company": "Foobar Systems",
-	    "emailAddress": "smithp@foobar-systems.com",
-	    "startDate": "3/1/2014",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-1887"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-324-6632"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "IA",
-		    "description": "Information Assurance"
-	    }
-    },
-    { 
-	    "userName": "bjohnson",
-	    "displayName": "Johnson, Bruce E.",
-	    "jobTitle": "Sr. Information Security Officer",
-	    "company": "Foobar Systems",
-	    "emailAddress": "bjohnson@foobar-systems.com",
-	    "startDate": "6/25/2001",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-1509"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-125-1775"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "IA",
-		    "description": "Information Assurance"
-	    }
-    },
-    { 
-	    "userName": "kharvey",
-	    "displayName": "Harvey, Katherin F.",
-	    "jobTitle": "Sr. Software Engineer",
-	    "company": "Foobar Systems",
-	    "emailAddress": "kharvey@foobar-systems.com",
-	    "startDate": "8/14/2006",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-6439"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-123-6575"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Eng",
-		    "description": "Engineering"
-	    }
-    },
-    { 
-	    "userName": "lwall",
-	    "displayName": "Wall, Larry Q.",
-	    "jobTitle": "Sr. Network Engineer",
-	    "company": "Foobar Systems",
-	    "emailAddress": "lwall@foobar-systems.com",
-	    "startDate": "10/07/2008",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-1234"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-123-5367"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
+        "userName": "psmith",
+        "displayName": "Smith, Patty K.",
+        "jobTitle": "Sr. Information Security Analyst",
+        "company": "Foobar Systems",
+        "emailAddress": "smithp@foobar-systems.com",
+        "startDate": "3/1/2014",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1887"
+            },
+            {
+                "type": "Cell",
+                "number": "703-324-6632"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "IA",
+            "description": "Information Assurance"
+        }
     },
     {
-	    "userName": "ftorvalds",
-	    "displayName": "Torvalds, Frank E.",
-	    "jobTitle": "Sr. Information Systems Analyst",
-	    "company": "Foobar Systems",
-	    "emailAddress": "ftorvalds@foobar-systems.com",
-	    "startDate": "1/03/2010",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-1236"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-753-8796"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
+        "userName": "bjohnson",
+        "displayName": "Johnson, Bruce E.",
+        "jobTitle": "Sr. Information Security Officer",
+        "company": "Foobar Systems",
+        "emailAddress": "bjohnson@foobar-systems.com",
+        "startDate": "6/25/2001",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1509"
+            },
+            {
+                "type": "Cell",
+                "number": "703-125-1775"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "IA",
+            "description": "Information Assurance"
+        }
     },
     {
-	    "userName": "rhickey",
-	    "displayName": "Hickey, Robert D.",
-	    "jobTitle": "Sr. Information Systems Analyst",
-	    "company": "Foobar Systems",
-	    "emailAddress": "rhickey@foobar-systems.com",
-	    "startDate": "2/12/2013",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-5512"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-786-1097"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
+        "userName": "kharvey",
+        "displayName": "Harvey, Katherine F.",
+        "jobTitle": "Sr. Software Engineer",
+        "company": "Foobar Systems",
+        "emailAddress": "kharvey@foobar-systems.com",
+        "startDate": "8/14/2006",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-6439"
+            },
+            {
+                "type": "Cell",
+                "number": "703-123-6575"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Eng",
+            "description": "Software Engineering"
+        }
     },
     {
-	    "userName": "simond",
-	    "displayName": "Simon, Derrek L.",
-	    "jobTitle": "Sr. Information Systems Analyst",
-	    "company": "Foobar Systems",
-	    "emailAddress": "dsimon@foobar-systems.com",
-	    "startDate": "5/20/2013",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-0917"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-432-9673"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
+        "userName": "lwall",
+        "displayName": "Wall, Larry Q.",
+        "jobTitle": "Sr. Network Engineer",
+        "company": "Foobar Systems",
+        "emailAddress": "lwall@foobar-systems.com",
+        "startDate": "10/07/2008",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1234"
+            },
+            {
+                "type": "Cell",
+                "number": "703-123-5367"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
     },
     {
-	    "userName": "ccondrad",
-	    "displayName": "Conrad, Chris M.",
-	    "jobTitle": "Sr. Information Systems Analyst",
-	    "company": "Foobar Systems",
-	    "emailAddress": "conradc@foobar-systems.com",
-	    "startDate": "8/10/2010",
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-0916"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-215-2245"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
+        "userName": "ztorvalds",
+        "displayName": "Torvalds, Zelda E.",
+        "jobTitle": "Information Systems Manager",
+        "company": "Foobar Systems",
+        "emailAddress": "ftorvalds@foobar-systems.com",
+        "startDate": "1/03/2010",
+        "manager": "true",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-1236"
+            },
+            {
+                "type": "Cell",
+                "number": "703-753-8796"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
     },
-    { 
-	    "userName": "carterp",
-	    "displayName": "Carter, Patrick L.",
-	    "jobTitle": "Sr. Requirements Analyst",
-	    "company": "Foobar Systems",
-	    "emailAddress": "carterp@foobar-systems.com",
-	    "startDate": "12/1/2009",
-	    "shifts": [
-		    {
-			    "startTime": "09:00",
-			    "endTime": "17:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "09:00",
-			    "endTime": "17:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "09:00",
-			    "endTime": "17:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "09:00",
-			    "endTime": "17:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "09:00",
-			    "endTime": "17:30",
-			    "day": "5"
-		    }
-	    ],
-	    "phoneNumbers": [
-		    {
-			    "type": "Work",
-			    "number": "703-456-0961"
-		    },
-		    {
-			    "type": "Cell",
-			    "number": "703-235-2344"
-		    }
-	    ],
-	    "shifts": [
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "1"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "2"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "3"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "4"
-		    },
-		    {
-			    "startTime": "06:00",
-			    "endTime": "14:30",
-			    "day": "5"
-		    }
-	    ],
-	    "Addresses": [
-		    {
-			    "addressType": "Work",
-			    "streetAddress": "1234 Anywhere Rd",
-			    "unit": "Suite 570",
-			    "city": "Smallville",
-			    "state": "Va",
-			    "zipCode": "22155"
-		    }
-	    ],
-	    "Team": {
-		    "name": "Ops",
-		    "description": "Network Operations"
-	    }
+    {
+        "userName": "rhickey",
+        "displayName": "Hickey, Robert D.",
+        "jobTitle": "Sr. Information Systems Analyst",
+        "company": "Foobar Systems",
+        "emailAddress": "rhickey@foobar-systems.com",
+        "startDate": "2/12/2013",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-5512"
+            },
+            {
+                "type": "Cell",
+                "number": "703-786-1097"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
+    },
+    {
+        "userName": "simond",
+        "displayName": "Simon, Derrek L.",
+        "jobTitle": "Sr. Information Systems Analyst",
+        "company": "Foobar Systems",
+        "emailAddress": "dsimon@foobar-systems.com",
+        "startDate": "5/20/2013",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-0917"
+            },
+            {
+                "type": "Cell",
+                "number": "703-432-9673"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
+    },
+    {
+        "userName": "ccondrad",
+        "displayName": "Conrad, Chris M.",
+        "jobTitle": "Sr. Information Systems Analyst",
+        "company": "Foobar Systems",
+        "emailAddress": "conradc@foobar-systems.com",
+        "startDate": "8/10/2010",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "1"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "2"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "3"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "4"
+            },
+            {
+                "startTime": "06:00",
+                "endTime": "14:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-0916"
+            },
+            {
+                "type": "Cell",
+                "number": "703-215-2245"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
+    },
+    {
+        "userName": "carterp",
+        "displayName": "Carter, Patrick L.",
+        "jobTitle": "Sr. Requirements Analyst",
+        "company": "Foobar Systems",
+        "emailAddress": "carterp@foobar-systems.com",
+        "startDate": "12/1/2009",
+        "manager": "false",
+        "shifts": [
+            {
+                "startTime": "09:00",
+                "endTime": "17:30",
+                "day": "1"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "17:30",
+                "day": "2"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "17:30",
+                "day": "3"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "17:30",
+                "day": "4"
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "17:30",
+                "day": "5"
+            }
+        ],
+        "phoneNumbers": [
+            {
+                "type": "Work",
+                "number": "703-456-0961"
+            },
+            {
+                "type": "Cell",
+                "number": "703-235-2344"
+            }
+        ],
+        "Addresses": [
+            {
+                "addressType": "Work",
+                "streetAddress": "1234 Anywhere Rd",
+                "unit": "Suite 570",
+                "city": "Smallville",
+                "state": "Va",
+                "zipCode": "22155"
+            }
+        ],
+        "Team": {
+            "name": "Ops",
+            "description": "Network Operations"
+        }
     }
 ]
