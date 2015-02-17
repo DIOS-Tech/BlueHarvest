@@ -129,3 +129,26 @@ let BootstrapEmployees() =
     Employees.Context.SubmitChanges()
 
 BootstrapEmployees()
+
+// scratch below....
+
+//EmployeeData.GetSamples()
+//
+//EmployeeData.GetSamples()
+//|> Seq.map(fun x -> [ x.DisplayName; x.JobTitle ])
+//|> Seq.toList
+//
+//query { 
+//    for e in EmployeeData.GetSamples() do
+//    where (e.Team.Name = "Ops")
+//    select [ e.DisplayName; e.JobTitle ]
+//} |> Seq.toList
+//
+//type NameAndShifts = 
+//  { DisplayName : string
+//    Shifts : Array }
+//
+//EmployeeData.GetSamples()
+//|> Seq.map(fun x -> { DisplayName = x.DisplayName; Shifts = x.Shifts })
+//|> Seq.take 10
+//|> Seq.toList
