@@ -52,13 +52,60 @@ type Task = dbSchema.ServiceTypes.Task
 let Teams = db.Team
 type Team = dbSchema.ServiceTypes.Team
 
-let AddEmployee(userName, displayName, jobTitle, company, emailAddress, startDate) =
-  let e = new Employee(UserName = userName, DisplayName = displayName, 
+let GetEmployees() =
+    Employees |> Seq.toList
+
+let GetEmployeeById(id) =
+    query {
+      for e in Employees do
+      where (e.Id = id)
+      select e
+      exactlyOneOrDefault
+    }    
+
+let GetEmployeeByUsername(userName) =
+    query {
+      for e in Employees do
+      where (e.UserName = userName)
+      select e
+      exactlyOneOrDefault
+    }    
+
+let AddEmployee(userName, lastName, firstName, displayName, jobTitle, company, emailAddress, startDate) =
+  let e = new Employee(UserName = userName, LastName = lastName, FirstName = firstName, DisplayName = displayName, 
                         JobTitle = jobTitle, Company = company, 
                         EmailAddress = emailAddress, StartDate = startDate)
 
   Employees.InsertOnSubmit(e)
   Employees.Context.SubmitChanges()
+
+let UpdateEmployee(employee:Employee) =
+   let e = GetEmployeeById(employee.Id)
+   if e <> null then
+    // I don't want to through an error if somebody passes in a null value for
+    // a column that cannot be null. Let's just check for it and if the column
+    // isn't null we'll update it.
+    if e.LastName <> null then
+      e.LastName <- employee.LastName
+    if e.FirstName <> null then
+      e.FirstName <- employee.FirstName
+    if not (String.IsNullOrEmpty(e.UserName) && GetEmployeeByUsername(e.UserName) = null) then
+      e.UserName <- employee.UserName
+    if not (String.IsNullOrEmpty(e.DisplayName)) then
+      e.DisplayName <- employee.DisplayName
+    if not (String.IsNullOrEmpty(e.JobTitle)) then
+      e.JobTitle <- employee.JobTitle
+    if not (String.IsNullOrEmpty(e.Company)) then
+      e.Company <- employee.Company
+    if not (String.IsNullOrEmpty(e.EmailAddress)) then
+      e.EmailAddress <- employee.EmailAddress
+    
+    e.StartDate <- employee.StartDate
+    e.EndDate <- employee.EndDate 
+    e.IsManager <- employee.IsManager
+    e.Deactivated <- employee.Deactivated
+
+    Employees.Context.SubmitChanges()
 
 let AddPhoneNumber(employee : Employee, phoneType : PhoneType, number : string) =
   let phoneNumber = new PhoneNumber(Employee = employee, PhoneType = phoneType, Number = number)
@@ -80,7 +127,7 @@ let GetPhoneType(name) =
     for p in PhoneTypes do
        where (p.Name = name)
        select p
-       exactlyOne
+       exactlyOneOrDefault
   }
 
 let BootstrapTeams() =
@@ -96,7 +143,7 @@ let GetTeam(name) =
     for t in Teams do
        where (t.Name = name)
        select t
-       exactlyOne
+       exactlyOneOrDefault
   }
 
 // Bootstrap the db quick and dirty

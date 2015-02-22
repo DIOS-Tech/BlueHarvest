@@ -55,13 +55,14 @@ module SQL =
        for e in Employees do
        where (e.Id = id)
        select e
-       exactlyOne
+       exactlyOneOrDefault
      }
 
-  let AddEmployee(userName, displayName, jobTitle, company, emailAddress, startDate) =
-    let e = new Employee(UserName = userName, DisplayName = displayName, 
+  let AddEmployee(userName, lastName, firstName, displayName, jobTitle, company, emailAddress, startDate) =
+    let e = new Employee(UserName = userName, LastName = lastName, FirstName = firstName, DisplayName = displayName, 
                           JobTitle = jobTitle, Company = company, 
                           EmailAddress = emailAddress, StartDate = startDate)
 
     Employees.InsertOnSubmit(e)
     Employees.Context.SubmitChanges()
+    
