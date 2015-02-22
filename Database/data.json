@@ -1,6 +1,8 @@
 [
     {
         "userName": "sfrench",
+        "lastName": "French",
+        "firstName":  "Sally",
         "displayName": "French, Sally H.",
         "jobTitle": "Software Architect",
         "company": "Foobar Systems",
@@ -61,6 +63,8 @@
     },
     {
         "userName": "phunt",
+        "lastName": "Hunt",
+        "firstName":  "Peter",
         "displayName": "Hunt, Peter Q.",
         "jobTitle": "Software Architect",
         "company": "Foobar Systems",
@@ -120,7 +124,9 @@
         }
     },
     {
-		"userName": "fsavage",
+        "userName": "fsavage",
+        "lastName": "Savage",
+        "firstName":  "Fred",
 		"displayName": "Savage, Fred Q.",
 		"jobTitle": "Network Manager",
 		"company": "Foobar Systems",
@@ -181,6 +187,8 @@
 	},
     {
         "userName": "jsmith",
+        "lastName": "Smith",
+        "firstName":  "John",
         "displayName": "Smith, John Q.",
         "jobTitle": "Sr. Network Engineer",
         "company": "Foobar Systems",
@@ -241,6 +249,8 @@
     },
     {
         "userName": "mjones",
+        "lastName": "Jones",
+        "firstName":  "Mike",
         "displayName": "Jones, Mike L.",
         "jobTitle": "Sr. Information Security Analyst",
         "company": "Foobar Systems",
@@ -301,6 +311,8 @@
     },
     {
         "userName": "jfox",
+        "lastName": "Fox",
+        "firstName":  "James",
         "displayName": "Fox, James S.",
         "jobTitle": "Sr. Information Security Officer",
         "company": "Foobar Systems",
@@ -361,6 +373,8 @@
     },
     {
         "userName": "jjohnson",
+        "lastName": "Johnson",
+        "firstName":  "Jonathan",
         "displayName": "Johnson, Jonathan F.",
         "jobTitle": "Sr. Software Engineer",
         "company": "Foobar Systems",
@@ -421,6 +435,8 @@
     },
     {
         "userName": "sdavis",
+        "lastName": "Davis",
+        "firstName":  "Sammy",
         "displayName": "Davis, Sammy Q.",
         "jobTitle": "Sr. Network Engineer",
         "company": "Foobar Systems",
@@ -481,7 +497,9 @@
     },
     {
         "userName": "fwilliams",
-        "displayName": "Williams, Frank E.",
+        "lastName": "Williams",
+        "firstName":  "Frank",
+        "displayName": "Williams, Frank G.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
         "emailAddress": "fwilliams@foobar-systems.com",
@@ -541,6 +559,8 @@
     },
     {
         "userName": "perryt",
+        "lastName": "Perry",
+        "firstName":  "Tyler",
         "displayName": "Perry, Tyler D.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
@@ -601,6 +621,8 @@
     },
     {
         "userName": "simmonsc",
+        "lastName": "Simmons",
+        "firstName":  "Connor",
         "displayName": "Simmons, Connor L.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
@@ -661,6 +683,8 @@
     },
     {
         "userName": "fosters",
+        "lastName": "Foster",
+        "firstName":  "Steven",
         "displayName": "Foster, Steven W.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
@@ -721,6 +745,8 @@
     },
     {
         "userName": "carterj",
+        "lastName": "Carter",
+        "firstName":  "James",
         "displayName": "Carter, James W.",
         "jobTitle": "Sr. Requirements Analyst",
         "company": "Foobar Systems",
@@ -781,6 +807,8 @@
     },
     {
         "userName": "ggordon",
+        "lastName": "Gordon",
+        "firstName":  "George",
         "displayName": "Gordon, George F.",
         "jobTitle": "Sr. Network Engineer",
         "company": "Foobar Systems",
@@ -841,6 +869,8 @@
     },
     {
         "userName": "psmith",
+        "lastName": "Smith",
+        "firstName":  "Patty",
         "displayName": "Smith, Patty K.",
         "jobTitle": "Sr. Information Security Analyst",
         "company": "Foobar Systems",
@@ -901,6 +931,8 @@
     },
     {
         "userName": "bjohnson",
+        "lastName": "Johnson",
+        "firstName":  "Bruce",
         "displayName": "Johnson, Bruce E.",
         "jobTitle": "Sr. Information Security Officer",
         "company": "Foobar Systems",
@@ -961,6 +993,8 @@
     },
     {
         "userName": "kharvey",
+        "lastName": "Harvey",
+        "firstName":  "Katherine",
         "displayName": "Harvey, Katherine F.",
         "jobTitle": "Sr. Software Engineer",
         "company": "Foobar Systems",
@@ -1021,6 +1055,8 @@
     },
     {
         "userName": "lwall",
+        "lastName": "Wall",
+        "firstName":  "Larry",
         "displayName": "Wall, Larry Q.",
         "jobTitle": "Sr. Network Engineer",
         "company": "Foobar Systems",
@@ -1081,6 +1117,8 @@
     },
     {
         "userName": "ztorvalds",
+        "lastName": "Torvalds",
+        "firstName":  "Zelda",
         "displayName": "Torvalds, Zelda E.",
         "jobTitle": "Information Systems Manager",
         "company": "Foobar Systems",
@@ -1141,6 +1179,8 @@
     },
     {
         "userName": "rhickey",
+        "lastName": "Hickey",
+        "firstName":  "Robert",
         "displayName": "Hickey, Robert D.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
@@ -1201,6 +1241,8 @@
     },
     {
         "userName": "simond",
+        "lastName": "Simon",
+        "firstName":  "Derrek",
         "displayName": "Simon, Derrek L.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
@@ -1261,6 +1303,8 @@
     },
     {
         "userName": "ccondrad",
+        "lastName": "Conrad",
+        "firstName":  "Chris",
         "displayName": "Conrad, Chris M.",
         "jobTitle": "Sr. Information Systems Analyst",
         "company": "Foobar Systems",
@@ -1321,6 +1365,8 @@
     },
     {
         "userName": "carterp",
+        "lastName": "Carter",
+        "firstName":  "Patrick",
         "displayName": "Carter, Patrick L.",
         "jobTitle": "Sr. Requirements Analyst",
         "company": "Foobar Systems",

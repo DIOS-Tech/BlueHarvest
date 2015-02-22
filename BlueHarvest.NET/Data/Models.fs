@@ -16,11 +16,8 @@ module Models =
     { ID : int
       Team : Team
       UserName : string
-      Password : string // This will be encrypted if used but since we will be
-                        // using ASP.NET Identity as it stands we won't have to
-                        // manage this. We'll leave this in here though in case
-                        // we want to dump ASP.NET Identity and it's complexity
-                        // later on...
+      LastName : string
+      FirstName : string
       DisplayName : string 
       JobTitle : string
       Company : string
@@ -53,7 +50,8 @@ module Models =
       Description : string
       [<DefaultValue>] 
       StartDate : Nullable<DateTime>
-      DueDate : DateTime
+      [<DefaultValue>] 
+      DueDate : Nullable<DateTime>
       [<DefaultValue>] 
       EndDate : Nullable<DateTime>
       Notes : string }
