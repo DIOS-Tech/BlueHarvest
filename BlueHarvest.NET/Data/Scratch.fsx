@@ -77,9 +77,11 @@ let AddEmployee(userName, lastName, firstName, displayName, jobTitle, company, e
                         EmailAddress = emailAddress, StartDate = startDate)
 
   Employees.InsertOnSubmit(e)
-  Employees.Context.SubmitChanges()
+  db.DataContext.SubmitChanges()
 
-let UpdateEmployee(employee:Employee) =
+let UpdateEmployee(employee:Employee) =   
+   //FIXME: If we pass in a valid employee with a valid ID we shouldn't be
+   //       looking the employee up in the DB.
    let e = GetEmployeeById(employee.Id)
    if e <> null then
     // I don't want to through an error if somebody passes in a null value for
@@ -105,13 +107,13 @@ let UpdateEmployee(employee:Employee) =
     e.IsManager <- employee.IsManager
     e.Deactivated <- employee.Deactivated
 
-    Employees.Context.SubmitChanges()
+    db.DataContext.SubmitChanges()
 
 let AddPhoneNumber(employee : Employee, phoneType : PhoneType, number : string) =
   let phoneNumber = new PhoneNumber(Employee = employee, PhoneType = phoneType, Number = number)
   
   employee.PhoneNumber.Add(phoneNumber)
-  Employees.Context.SubmitChanges()
+  db.DataContext.SubmitChanges()
 
 let BootstrapPhoneTypes() =
   let phoneTypes = [| new PhoneType(Name = "Work");
@@ -120,15 +122,111 @@ let BootstrapPhoneTypes() =
                       new PhoneType(Name = "Other") |]
 
   PhoneTypes.InsertAllOnSubmit(phoneTypes)
-  PhoneTypes.Context.SubmitChanges()
+  db.DataContext.SubmitChanges()
 
-let GetPhoneType(name) =
+let GetPhoneTypeById(id) =
+  query {
+    for p in PhoneTypes do
+       where (p.Id = id)
+       select p
+       exactlyOneOrDefault
+  }
+
+let GetPhoneTypeByName(name) =
   query {
     for p in PhoneTypes do
        where (p.Name = name)
        select p
        exactlyOneOrDefault
   }
+
+let GetEmployeePhoneById(id) =
+  query {
+    for p in PhoneNumbers do
+       where (p.Id = id)
+       select p
+       exactlyOneOrDefault
+  }
+
+let UpdatePhoneTypeByName(oldName, newName) =  
+  let phoneType = GetPhoneTypeByName(oldName)
+  if phoneType <> null then
+    phoneType.Name <- newName
+    db.DataContext.SubmitChanges()
+
+let UpdatePhoneNumberByEmployeeId(employeeId, phoneId, phoneTypeId, number) =
+  let emp = GetEmployeeById(employeeId)
+  let pt = GetPhoneTypeById(phoneTypeId)
+  if not (emp = null && pt = null) then
+    let phoneNumber = 
+      query {
+        for pn in emp.PhoneNumber do
+        where (pn.Id = phoneId)
+        select pn
+        exactlyOneOrDefault
+      }
+
+    if phoneNumber <> null then
+      phoneNumber.Number <- number
+      db.DataContext.SubmitChanges()
+
+let GetAddressTypeByName(name) =
+  query {
+    for a in AddressTypes do
+       where (a.Name = name)
+       select a
+       exactlyOneOrDefault
+  }
+
+let UpdateAddressTypeByName(oldName, newName) =
+  let address = GetAddressTypeByName(oldName)
+  if address <> null then
+    address.Name <- newName
+    db.DataContext.SubmitChanges()
+
+let GetTaskById(id) =
+  query {
+    for t in Tasks do
+       where (t.Id = id)
+       select t
+       exactlyOneOrDefault
+  } 
+
+//FIXME: Once the basic data access layer in place some fixes to the
+//       Task table needs to take place. Instead of having an EmployeeTasks
+//       table to track what tasks are assigned to an employee we just need
+//       to have an employee ID column in this table.
+let AddTask(name, description, startDate, dueDate, endDate, notes) =
+  let task = new Task(Name = name, Description = description, StartDate = startDate, DueDate = dueDate, EndDate = endDate, Notes = notes)  
+
+  Tasks.InsertOnSubmit(task)
+  db.DataContext.SubmitChanges()
+
+let UpdateTask(task:Task) =
+  let t = GetTaskById(task.Id)
+  if t <> null then
+    if not (String.IsNullOrEmpty(task.Name)) then
+      t.Name <- task.Name
+    if not (String.IsNullOrEmpty(task.Description)) then
+      t.Description <- task.Description
+    
+    t.StartDate <- task.StartDate
+    t.DueDate <- task.DueDate
+    t.EndDate <- task.EndDate
+    t.Notes <- task.Notes
+
+    db.DataContext.SubmitChanges()
+
+let AssignTask(employeeId, taskId) =
+  let emp = GetEmployeeById(employeeId)
+  let task = GetTaskById(taskId)
+
+  if not (emp = null && task = null) then
+    let et = new EmployeeTask(EmployeeID = emp.Id, TaskID = taskId)
+    EmployeeTasks.InsertOnSubmit(et)
+    db.DataContext.SubmitChanges()
+
+// Bootstrap helpers
 
 let BootstrapTeams() =
   let teams = [| new Team(Name = "Ops", Description = "Network Operations");
@@ -137,6 +235,14 @@ let BootstrapTeams() =
 
   Teams.InsertAllOnSubmit(teams)
   Teams.Context.SubmitChanges()
+
+let BootstrapAddressTypes() =
+  let addressTypes = [| new AddressType(Name = "Home");
+                        new AddressType(Name = "Work");
+                        new AddressType(Name = "Other"); |]
+
+  AddressTypes.InsertAllOnSubmit(addressTypes)
+  db.DataContext.SubmitChanges()
 
 let GetTeam(name) =
   query {
@@ -149,12 +255,15 @@ let GetTeam(name) =
 // Bootstrap the db quick and dirty
 let BootstrapEmployees() = 
 
+  BootstrapAddressTypes()
   BootstrapPhoneTypes()
   BootstrapTeams()
 
   for e in EmployeeData.GetSamples() do
     Console.WriteLine("Adding: {0}", e.DisplayName)
     let emp = new Employee()
+    emp.LastName <- e.LastName
+    emp.FirstName <- e.FirstName
     emp.UserName <- e.UserName
     emp.DisplayName <- e.DisplayName
     emp.JobTitle <- e.JobTitle
@@ -166,7 +275,7 @@ let BootstrapEmployees() =
     Employees.Context.SubmitChanges()
 
     e.PhoneNumbers
-    |> Seq.iter (fun pn -> emp.PhoneNumber.Add(new PhoneNumber(PhoneTypeID = GetPhoneType(pn.Type).Id, Number = pn.Number)))
+    |> Seq.iter (fun pn -> emp.PhoneNumber.Add(new PhoneNumber(PhoneTypeID = GetPhoneTypeByName(pn.Type).Id, Number = pn.Number)))
 
     e.Shifts
     |> Seq.iter (fun s -> emp.Shift.Add(new Shift(StartTime = s.StartTime.TimeOfDay, EndTime = s.EndTime.TimeOfDay, Day = s.Day)))
