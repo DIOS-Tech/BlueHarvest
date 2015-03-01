@@ -9,8 +9,7 @@ In development, not usable yet.
 ###Project Layout
 
 BlueHarvest.NET - A .NET based ASP.NET MVC and Web API application  
-Database - This contains the initial SQL Server db script as well as an
-SQL Server backup that also provides a database diagram.
+Database - This contains the initial SQL Server db script
 
 ###Development
 
