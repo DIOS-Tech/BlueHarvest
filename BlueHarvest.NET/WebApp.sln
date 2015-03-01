@@ -14,6 +14,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Data", "Data\Data.fsproj", 
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Common", "Common\Common.fsproj", "{FB697140-86EC-42C8-A751-40B710E3B3B0}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebApi", "WebApi\WebApi.fsproj", "{EDE1E362-DF83-4A32-9494-2F8E296EBD51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{FB697140-86EC-42C8-A751-40B710E3B3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB697140-86EC-42C8-A751-40B710E3B3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB697140-86EC-42C8-A751-40B710E3B3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE1E362-DF83-4A32-9494-2F8E296EBD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE1E362-DF83-4A32-9494-2F8E296EBD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE1E362-DF83-4A32-9494-2F8E296EBD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE1E362-DF83-4A32-9494-2F8E296EBD51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
