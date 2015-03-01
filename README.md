@@ -4,7 +4,7 @@ An employee management system
 
 ###Status
 
-Still in the early stages of discussion, no real useful stuff here yet.
+In development, not usable yet.
 
 ###Project Layout
 
