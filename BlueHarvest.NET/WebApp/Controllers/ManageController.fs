@@ -9,6 +9,7 @@ open Microsoft.AspNet.Identity
 open Microsoft.AspNet.Identity.Owin
 open Microsoft.Owin.Security
 
+open Common.Helpers
 open BlueHarvest.Infrastructure
 open BlueHarvest.Infrastructure.Helpers
 open BlueHarvest.Models
