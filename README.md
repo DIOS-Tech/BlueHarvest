@@ -9,7 +9,6 @@ Still in the early stages of discussion, no real useful stuff here yet.
 ###Project Layout
 
 BlueHarvest.NET - A .NET based ASP.NET MVC and Web API application  
-BlueHarvest.JS - An io.js / Atom-Shell prototype sandbox  
 Database - This contains the initial SQL Server db script as well as an
 SQL Server backup that also provides a database diagram.
 
@@ -29,11 +28,6 @@ the connection string in the web.config file to point to your server.
 
 NOTE: Upon first build all Nuget managed dependencies should download 
 automatically
-
-**BlueHarvest.JS**: io.js, bower
-
-Open a command prompt to BlueHarvest.JS/harvey and run 'npm install' and then 
-'bower install' so that all dependencies are installed.
 
 ###License
 
