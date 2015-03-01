@@ -14,6 +14,7 @@ open Microsoft.Owin.Security
 
 open BlueHarvest.Infrastructure
 open BlueHarvest.Infrastructure.Helpers
+open Common.Helpers
 open BlueHarvest.Models
 
 [<Authorize>]
