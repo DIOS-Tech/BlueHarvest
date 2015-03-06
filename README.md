@@ -19,8 +19,8 @@ After cloning the repo peform these steps to download dependencies:
 
 **BlueHarvest.NET**: io.js, bower, Visual Studio 2013, SQL Server or SQL Server Express
 
-Open a command prompt to BlueHarvest.NET/WebApp and run 'bower install' so that
-all bower managed dependencies (eg. jquery, bootstrap, etc...) are installed.
+Open a command prompt to BlueHarvest.NET/WebApp and BlueHarvest.NET/WebApi and run 'bower install' 
+so that all bower managed dependencies (eg. jquery, bootstrap, etc...) are installed.
 
 NOTE: Use BlueHarvest.sql in the Database folder to build the database. Change 
 the connection string in the web.config file to point to your server.
