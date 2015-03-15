@@ -18,6 +18,9 @@ module SQL =
   let AddressTypes = db.AddressType
   type AddressType = dbSchema.ServiceTypes.AddressType
 
+  let Contacts = db.Contact
+  type Contact = dbSchema.ServiceTypes.Contact
+
   let Employees = db.Employee
   type Employee = dbSchema.ServiceTypes.Employee
 
@@ -41,6 +44,12 @@ module SQL =
 
   let Teams = db.Team
   type Team = dbSchema.ServiceTypes.Team
+
+  let TimeEntries = db.TimeEntry
+  type TimeEntry = dbSchema.ServiceTypes.TimeEntry
+
+  let TimeTypes = db.TimeType
+  type TimeType = dbSchema.ServiceTypes.TimeType
 
   let GetEmployees() =
       Employees |> Seq.toList
@@ -216,3 +225,131 @@ module SQL =
       EmployeeTasks.InsertOnSubmit(et)
       db.DataContext.SubmitChanges()
     
+  let GetTimeTypeById(id) = 
+    query {
+      for t in TimeTypes do        
+        where (t.Id = id)
+        select t
+        exactlyOneOrDefault
+    }
+
+  let AddTimeType(name, code) =
+    let tt = new TimeType(Name = name, Code = code)
+    TimeTypes.InsertOnSubmit(tt)
+    db.DataContext.SubmitChanges()
+
+  let UpdateTimeType(id, name, code) =
+    let tt = GetTimeTypeById(id)
+    
+    if tt <> null then
+      tt.Name <- name
+      tt.Code <- code
+
+      db.DataContext.SubmitChanges()
+
+  let DeleteTimeType(id) =
+    let tt = 
+      query {
+        for t in TimeTypes do        
+          where (t.Id = id)
+          select t
+          exactlyOneOrDefault
+      }
+
+    if tt <> null then
+      TimeTypes.DeleteOnSubmit(tt)
+      db.DataContext.SubmitChanges()
+
+  let GetTimeEntryById(id) =
+    query {
+      for t in TimeEntries do        
+        where (t.Id = id)
+        select t
+        exactlyOneOrDefault
+    }      
+
+  let AddTimeEntry(employeeId, timeTypeId, startTime, endTime, notes) =
+    let te = new TimeEntry(EmployeeID = employeeId, TimeTypeID = timeTypeId, StartTime = startTime, EndTime = endTime, Notes = notes)
+    TimeEntries.InsertOnSubmit(te)
+    db.DataContext.SubmitChanges()
+
+  let UpdateTimeEntry(id, startTime, endTime, notes) =
+    let te = GetTimeEntryById(id)
+
+    if te <> null then
+      te.StartTime <- startTime
+      te.EndTime <- endTime
+      te.Notes <- notes
+
+      db.DataContext.SubmitChanges()
+
+  let DeleteTimeEntry(id) =
+    let te = 
+      query {
+        for t in TimeEntries do        
+          where (t.Id = id)
+          select t
+          exactlyOneOrDefault
+      }
+
+    if te <> null then
+      TimeEntries.DeleteOnSubmit(te)
+      db.DataContext.SubmitChanges()
+
+  let GetContactById(id) =
+    query {
+      for c in Contacts do        
+        where (c.Id = id)
+        select c
+        exactlyOneOrDefault
+    }
+
+  let GetPhoneNumberById(id) =
+    query {
+      for p in PhoneNumbers do        
+        where (p.Id = id)
+        select p
+        exactlyOneOrDefault
+    }   
+
+  let GetAddressById(id) =
+    query {
+      for a in Addresses do        
+        where (a.Id = id)
+        select a
+        exactlyOneOrDefault
+    }     
+
+  // I'm cutting a corner here, we need a higher level function which is a little more
+  // useful when it comes to the phone number and address. Instead of providing a way
+  // to set that here I'm just going to assume it's already valid and we'll just provide
+  // an id. This needs to be changed later.
+  let AddContact(firstName, lastName, phoneNumberId, addressId) =
+    // Make sure phoneNumberId and addressId is valid
+    if GetPhoneNumberById(phoneNumberId) <> null 
+       && GetAddressById(addressId) <> null then
+      let c = new Contact(FirstName = firstName, LastName = lastName, PhoneNumberID = phoneNumberId, AddressID = addressId)
+      Contacts.InsertOnSubmit(c)
+      db.DataContext.SubmitChanges()
+  
+  let UpdateContact(id, firstName, lastName, phoneNumberId, addressId) =
+    // Make sure phoneNumberId and addressId is valid
+    if GetPhoneNumberById(phoneNumberId) <> null 
+       && GetAddressById(addressId) <> null then
+
+      let c = GetContactById(id)
+
+      if c <> null then
+        c.FirstName <- firstName
+        c.LastName <- lastName
+        c.AddressID <- addressId
+        c.PhoneNumberID <- phoneNumberId
+
+      db.DataContext.SubmitChanges()
+
+  let DeleteContact(id) =
+    let c = GetContactById(id)
+
+    if c <> null then
+      Contacts.DeleteOnSubmit(c)
+      db.DataContext.SubmitChanges()
